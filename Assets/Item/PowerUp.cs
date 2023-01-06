@@ -12,6 +12,7 @@ public class PowerUp : Item
         if (other.TryGetComponent(out EntityHealth health))
         {
             health.UpdateMaxHealth(_healthBonus);
+            Destroy(gameObject);
         }
 
     }

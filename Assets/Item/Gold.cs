@@ -12,6 +12,7 @@ public class Gold : Item
         if (other.TryGetComponent(out EntityGold gold))
         {
             gold.UpdateCurrentGold(_goldGain);
+            Destroy(gameObject);
         }
 
     }
