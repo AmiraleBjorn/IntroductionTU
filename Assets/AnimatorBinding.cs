@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class AnimatorBinding : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] PlayerMove _playerMove;
+    [SerializeField] Animator _animator;
+    public void Start()
     {
-        
+        _playerMove.OnStartMove += SetMove;
+        _playerMove.OnStopMove += SetIdle;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetMove()
     {
-        
+        _animator.SetBool("Walking", true);
+    }
+    public void SetIdle()
+    {
+        _animator.SetBool("Walking", false);
     }
 }
