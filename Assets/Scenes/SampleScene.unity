@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 27752335}
   - component: {fileID: 27752334}
   - component: {fileID: 27752333}
+  - component: {fileID: 27752336}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -150,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27752331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.78, y: 0, z: 6.98}
+  m_LocalPosition: {x: -6.85, y: 0.02, z: 6.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -220,6 +221,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27752331}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &27752336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27752331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31386448ed24ef4a834e9e8d54ae1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 0
 --- !u!1 &58043774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1821,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcca2186ac283d449a0bab40d85dce73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _attack: {fileID: 7026885336388250030, guid: 7465c15ff2f50e14295da1356a60d5be, type: 3}
+  _hitBox: {fileID: 863578700}
+  _onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _onEventPost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &1349007872
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2510,6 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMove: {fileID: 1349007867}
+  _playerAttack: {fileID: 1349007871}
   _animator: {fileID: 1794143068}
 --- !u!95 &1794143068 stripped
 Animator:

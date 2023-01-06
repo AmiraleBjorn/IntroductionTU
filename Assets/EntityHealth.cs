@@ -14,13 +14,18 @@ public class EntityHealth : MonoBehaviour
         CurrentHealth = _maxHealth;
     }
 
-    public void UpdateMaxHealth(int value)
+    public void Hit()
     {
-        _maxHealth += value;
+        CurrentHealth -= 10;
+        if (CurrentHealth <= 0)
+        {
+            Death();
+        }
+
     }
 
-    public void UpdateCurrentHealth(int value)
+    public void Death()
     {
-        CurrentHealth += value;
+        Destroy(gameObject);
     }
 }

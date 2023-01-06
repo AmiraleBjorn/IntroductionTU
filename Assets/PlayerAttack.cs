@@ -11,6 +11,47 @@ using UnityEngine.SceneManagement;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public event Action OnAttack;
-    public event Action OnPeace;
+    [SerializeField] InputActionReference _attack;
+
+    public event Action OnStartAttack;
+    public event Action OnStopAttack;
+
+    [SerializeField] HitEntity _hitBox;
+    [SerializeField] UnityEvent _onEvent;
+    [SerializeField] UnityEvent _onEventPost;
+
+    Coroutine AttackingRoutine { get; set; }
+    private void Start()
+    {
+        _attack.action.started += StartAttack;
+        _attack.action.canceled += StopAttack;
+    }
+    private void OnDestroy()
+    {
+        _attack.action.started -= StartAttack;
+        _attack.action.canceled -= StopAttack;
+    }
+    IEnumerator AttackRoutine()
+    {
+        OnStartAttack?.Invoke();
+
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            if (_hitBox.touche == 1)
+            {
+                _hitBox.Attack();
+            }
+        }
+    }
+    private void StopAttack(InputAction.CallbackContext obj)
+    {
+        OnStopAttack?.Invoke();
+        StopCoroutine(AttackRoutine());
+    }
+
+    private void StartAttack(InputAction.CallbackContext obj)
+    {
+        AttackingRoutine = StartCoroutine(AttackRoutine());
+    }
 }
