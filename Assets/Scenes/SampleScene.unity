@@ -718,7 +718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 20
-  _healthUI: {fileID: 0}
 --- !u!4 &395592695
 Transform:
   m_ObjectHideFlags: 0
@@ -916,6 +915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7499bffe1014f1543b146684ba24ef84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _text: {fileID: 1667000045}
+  _playerGold: {fileID: 1349007870}
 --- !u!1001 &599547463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slider: {fileID: 1044316936}
-  _text: {fileID: 0}
+  _text: {fileID: 1680877072}
   _playerHealth: {fileID: 1349007869}
 --- !u!1 &728913436
 GameObject:
@@ -1783,7 +1784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthUI: {fileID: 720956015}
 --- !u!114 &1349007870
 MonoBehaviour:
   m_ObjectHideFlags: 0
