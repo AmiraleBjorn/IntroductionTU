@@ -5,8 +5,7 @@ using UnityEngine;
 public class EntityHealth : MonoBehaviour
 {
 
-    [SerializeField] int _maxHealth;
-
+    public int _maxHealth;
 
     public int CurrentHealth { get; private set; }
 
@@ -15,13 +14,13 @@ public class EntityHealth : MonoBehaviour
         CurrentHealth = _maxHealth;
     }
 
-
-    public void Hit()
+    public void UpdateMaxHealth(int value)
     {
+        CurrentHealth += value;
         _maxHealth += value;
     }
 
-    public void Death()
+    public void UpdateCurrentHealth(int value)
     {
         CurrentHealth += value;
     }
