@@ -5,8 +5,7 @@ using UnityEngine;
 public class EntityHealth : MonoBehaviour
 {
 
-    [SerializeField] int _maxHealth;
-
+    public int _maxHealth;
 
     public int CurrentHealth { get; private set; }
 
@@ -15,21 +14,14 @@ public class EntityHealth : MonoBehaviour
         CurrentHealth = _maxHealth;
     }
 
-
     public void UpdateMaxHealth(int value)
     {
-        HealthUI healthUI = GetComponent<HealthUI>();
         CurrentHealth += value;
         _maxHealth += value;
-        Debug.Log(healthUI);
-        /*healthUI.UpdateSlider(CurrentHealth);*/
     }
 
     public void UpdateCurrentHealth(int value)
     {
-        HealthUI healthUI = GetComponent<HealthUI>();
         CurrentHealth += value;
-        Debug.Log(healthUI);
-        /*healthUI.UpdateSlider(CurrentHealth);*/
     }
 }
