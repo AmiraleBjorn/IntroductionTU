@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PowerUp : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] int _healthBonus;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.TryGetComponent(out EntityHealth health))
+        {
+            health.UpdateMaxHealth(_healthBonus);
+        }
+
     }
 }

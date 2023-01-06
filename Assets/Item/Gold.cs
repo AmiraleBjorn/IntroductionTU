@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Gold : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] int _goldGain;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.TryGetComponent(out EntityGold gold))
+        {
+            gold.UpdateCurrentGold(_goldGain);
+        }
+
     }
 }
