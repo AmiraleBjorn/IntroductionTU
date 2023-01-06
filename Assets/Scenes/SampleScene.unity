@@ -922,6 +922,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792663629}
     m_Modifications:
+    - target: {fileID: -5947771223580394899, guid: 8cbcc73477c16c545804b189e6229774,
+        type: 3}
+      propertyPath: _itemName
+      value: Power Up
+      objectReference: {fileID: 0}
+    - target: {fileID: -5947771223580394899, guid: 8cbcc73477c16c545804b189e6229774,
+        type: 3}
+      propertyPath: _healthBonus
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 97553736113787560, guid: 8cbcc73477c16c545804b189e6229774,
         type: 3}
       propertyPath: m_RootOrder
@@ -1642,6 +1652,7 @@ GameObject:
   - component: {fileID: 1349007871}
   - component: {fileID: 1349007869}
   - component: {fileID: 1349007870}
+  - component: {fileID: 1349007872}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1783,6 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfec9e5ecc7c75548a28c3249edc0e3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _baseGold: 0
 --- !u!114 &1349007871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +1807,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcca2186ac283d449a0bab40d85dce73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1349007872
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349007864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1576631183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1802,6 +1828,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 792663629}
     m_Modifications:
+    - target: {fileID: 4441928871813012542, guid: df17769e7a3d8134d8ac027e1df9461e,
+        type: 3}
+      propertyPath: _goldGain
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441928871813012542, guid: df17769e7a3d8134d8ac027e1df9461e,
+        type: 3}
+      propertyPath: _itemName
+      value: Gold
+      objectReference: {fileID: 0}
     - target: {fileID: 7068944266405786497, guid: df17769e7a3d8134d8ac027e1df9461e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2586,6 +2622,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700284095180167991, guid: 0c807365b9687b644a173a505dba58bb,
+        type: 3}
+      propertyPath: _itemName
+      value: Health Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700284095180167991, guid: 0c807365b9687b644a173a505dba58bb,
+        type: 3}
+      propertyPath: _healthGain
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c807365b9687b644a173a505dba58bb, type: 3}
