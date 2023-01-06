@@ -11,14 +11,7 @@ public class HitEntity : MonoBehaviour
     {
         if (collision.GetComponent<EntityHealth>())
         {
-            entity = collision.GetComponent<EntityHealth>();
-            touche += 1;
+            collision.GetComponent<EntityHealth>().Hit();
         }
-    }
-
-    public void Attack()
-    {
-        touche = 0;
-        entity.Hit();
     }
 }

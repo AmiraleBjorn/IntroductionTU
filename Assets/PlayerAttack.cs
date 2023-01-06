@@ -16,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     public event Action OnStartAttack;
     public event Action OnStopAttack;
 
+    
     [SerializeField] HitEntity _hitBox;
     [SerializeField] UnityEvent _onEvent;
     [SerializeField] UnityEvent _onEventPost;
@@ -23,6 +24,7 @@ public class PlayerAttack : MonoBehaviour
     Coroutine AttackingRoutine { get; set; }
     private void Start()
     {
+        _hitBox.gameObject.SetActive(false);
         _attack.action.started += StartAttack;
         _attack.action.canceled += StopAttack;
     }
@@ -40,7 +42,7 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitForFixedUpdate();
             if (_hitBox.touche == 1)
             {
-                _hitBox.Attack();
+                _hitBox.gameObject.SetActive(true);
             }
         }
     }
