@@ -11,6 +11,7 @@ public class HealthPotion : Item
         if (other.TryGetComponent(out EntityHealth health))
         {
             health.UpdateCurrentHealth(_healthGain);
+            Destroy(gameObject);
         }
     }
 }
