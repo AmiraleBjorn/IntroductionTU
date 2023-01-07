@@ -11,7 +11,7 @@ public class EntityHealth : MonoBehaviour
 
     private void Awake()
     {
-        CurrentHealth = _maxHealth;
+        CurrentHealth = 50;
     }
     public void Hit()
     {
@@ -34,6 +34,10 @@ public class EntityHealth : MonoBehaviour
 
     public void UpdateCurrentHealth(int value)
     {
-        CurrentHealth += value;
+        if(CurrentHealth < _maxHealth)
+        {
+            CurrentHealth += value;
+        }
+        
     }
 }

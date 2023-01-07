@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GoldUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] TextMeshProUGUI _text;
+    [SerializeField] EntityGold _playerGold;
+
+    int CachedMaxGold { get; set; }
+    public void UpdateSlider(int newGoldValue)
     {
-        
+        _text.text = newGoldValue.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        UpdateSlider(_playerGold.CurrentGold);
     }
 }

@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,17 +12,25 @@ public class HealthUI : MonoBehaviour
     [SerializeField] EntityHealth _playerHealth;
 
     int CachedMaxHealth { get; set; }
-    private void Update()
-    {
-        CachedMaxHealth = _playerHealth._maxHealth;
-        UpdateSlider(_playerHealth.CurrentHealth);
-    }
-    void UpdateSlider(int newHealthValue)
+
+
+    public void UpdateSlider(int newHealthValue)
     {
         _slider.value = newHealthValue;
-*//*        _text.text = $"{newHealthValue} / {CachedMaxHealth}";*//*
-        _text.text = newHealthValue + " / " + CachedMaxHealth;
+        _text.text = $"{newHealthValue} / {CachedMaxHealth}";
+    }
+
+    public void UpdateSliderMaxHealth(int newMaxHealthValue)
+    {
+        _slider.maxValue = newMaxHealthValue;
+        _text.text = $"{_playerHealth.CurrentHealth} / {newMaxHealthValue}";
+        CachedMaxHealth = newMaxHealthValue;
+    }
+
+    private void Update()
+    {
+        UpdateSlider(_playerHealth.CurrentHealth);
+        UpdateSliderMaxHealth(_playerHealth._maxHealth);
     }
 
 }
-*/
