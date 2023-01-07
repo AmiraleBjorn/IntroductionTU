@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31386448ed24ef4a834e9e8d54ae1ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 0
+  _maxHealth: 20
 --- !u!1 &58043774
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 20
-  _healthUI: {fileID: 0}
 --- !u!4 &395592695
 Transform:
   m_ObjectHideFlags: 0
@@ -1797,7 +1796,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  _healthUI: {fileID: 720956015}
 --- !u!114 &1349007870
 MonoBehaviour:
   m_ObjectHideFlags: 0

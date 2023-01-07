@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,8 +20,9 @@ public class HealthUI : MonoBehaviour
     void UpdateSlider(int newHealthValue)
     {
         _slider.value = newHealthValue;
-/*        _text.text = $"{newHealthValue} / {CachedMaxHealth}";*/
+*//*        _text.text = $"{newHealthValue} / {CachedMaxHealth}";*//*
         _text.text = newHealthValue + " / " + CachedMaxHealth;
     }
 
 }
+*/

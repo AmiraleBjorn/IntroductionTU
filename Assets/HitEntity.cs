@@ -13,5 +13,9 @@ public class HitEntity : MonoBehaviour
         {
             collision.GetComponent<EntityHealth>().Hit();
         }
+        else if (collision.GetComponentInParent<EntityHealth>())
+        {
+            collision.GetComponentInParent<EntityHealth>().Hit();
+        }
     }
 }

@@ -40,16 +40,15 @@ public class PlayerAttack : MonoBehaviour
         while (true)
         {
             yield return new WaitForFixedUpdate();
-            if (_hitBox.touche == 1)
-            {
-                _hitBox.gameObject.SetActive(true);
-            }
+            _hitBox.gameObject.SetActive(true);
+            
         }
     }
     private void StopAttack(InputAction.CallbackContext obj)
     {
         OnStopAttack?.Invoke();
         StopCoroutine(AttackRoutine());
+        _hitBox.gameObject.SetActive(false);
     }
 
     private void StartAttack(InputAction.CallbackContext obj)
